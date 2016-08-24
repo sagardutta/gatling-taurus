@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="importsvc:war">
+    <output-path>$PROJECT_DIR$/../walker-import-service/war/target</output-path>
+    <root id="archive" name="importsvc.war">
+      <element id="artifact" artifact-name="importsvc:war exploded" />
+    </root>
+  </artifact>
+</component>

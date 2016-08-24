@@ -1,0 +1,8 @@
+---
+execution:
+- executor: gatling
+  scenario: sample
+scenarios:
+  sample:
+    script: /tmp/src/test/scala/BasicTest.scala
+    simulation: tests.gatling.BasicSimulation
