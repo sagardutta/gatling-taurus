@@ -1,23 +1,6 @@
-# OsimSvcGatlingSuite
+Project setup
 
-Install SBT - follow instruction in this page to install on a mac http://www.scala-sbt.org/0.13/tutorial/Installing-sbt-on-Mac.html
-
-run sbt command on the root of this project
-
-    $ sbt
-
-Once in sbt, run this command to compile the project
-
-    > compile
-
-To create Eclipse project. IntelliJ has a built in plugin for sbt
-
-    > eclipse
-
-To execute the gatling tests
-
-    > test
-
-To view the report genrated by this test
-
-    > lastReport
+BasicTest uses Helper to run a simulation
+Helper can use multiple other scala scripts to setup test data and get ready for the test
+Under the resources folder we have a conf file which contains env configs and couple of json files which will be sent as requests
+I need help running this simple setup in blazemeter using taurus config
