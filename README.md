@@ -8,3 +8,7 @@
 ## How to run the test
 
 * sbt test
+
+## How to create a uber jar with all the scala files and the dependent jars
+
+* sbt package
