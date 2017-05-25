@@ -3,7 +3,10 @@
 *.log
 
 # sbt specific
-.cache
+.cache-tests
+.settings
+.idea/
+.classpath
 .history
 .lib/
 dist/*
