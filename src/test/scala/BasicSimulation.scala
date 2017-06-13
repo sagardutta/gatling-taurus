@@ -13,7 +13,7 @@ val httpProtocol = http
   val iterations = Integer.getInteger("iterations", 100).toInt
   val concurrency = Integer.getInteger("concurrency", 1).toInt
   val rampUp = Integer.getInteger("ramp-up", 1).toInt
-  val holdFor = Integer.getInteger("hold-for", 60).toInt
+  val holdFor = Integer.getInteger("hold-for", 20).toInt
   val httpConf = http.baseURL("http://blazedemo.com/")
 
 
