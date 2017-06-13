@@ -1,7 +1,7 @@
 lazy val root = (project in file("."))
   .enablePlugins(GatlingPlugin)
   .settings(
-    name := "OsimSvcGatlingSuite",
+    name := "TestSuite",
     version := "1.0",
     scalaVersion := "2.11.5"
   )
@@ -12,6 +12,6 @@ libraryDependencies ++= Seq(
   "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.1.2",
   "net.liftweb" % "lift-json_2.11" % "2.6",
   "junit" % "junit" % "4.11" % "test",
-  "org.json" % "json" % "20141113"	
-  
+  "org.json" % "json" % "20141113"
+
 )
