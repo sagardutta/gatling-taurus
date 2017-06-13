@@ -1,4 +1,10 @@
-##Project setup
+## Context
+
+* This project helps with onboarding to a simple performance test suite built on top of Gatling DSL
+* It explains the concept of scenarios, simulations, configuration and various aspects of Gatling at a very high level.
+* The idea is to let people have a playground which can be explored to get comfortable with Gatling.
+
+## Project setup
 
 * BasicTest uses Helper to run a simulation
 * Helper can use multiple other scala scripts to setup test data and get ready for the test
