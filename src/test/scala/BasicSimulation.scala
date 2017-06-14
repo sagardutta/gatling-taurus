@@ -10,17 +10,15 @@ val httpProtocol = http
    .baseURL("http://")
 
   // parse load profile from Taurus
-  val iterations = Integer.getInteger("iterations", 100).toInt
+
   val concurrency = Integer.getInteger("concurrency", 1).toInt
-  val rampUp = Integer.getInteger("ramp-up", 1).toInt
-  val holdFor = Integer.getInteger("hold-for", 60).toInt
-  val httpConf = http.baseURL("http://blazedemo.com/")
 
-
+  val holdFor = Integer.getInteger("hold-for", 20).toInt
 
 
  val test = scenario("test taurus")
-  .exec(Helper.run)
+  .exec(AuthHelper.authenticate)
+  .exec(Helper.createUser)
 
   setUp(test.inject(constantUsersPerSec(concurrency) during (holdFor seconds))).protocols(httpProtocol)
 

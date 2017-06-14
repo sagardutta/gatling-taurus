@@ -9,18 +9,6 @@
         </layout>
     </appender>
 
-    <!--<logger name="com.mkyong.web" level="debug"-->
-    <!--additivity="false">-->
-    <!--<appender-ref ref="STDOUT" />-->
-    <!--</logger>-->
-
-    <!--<logger  name="io.gatling.http.ahc" level="debug" />-->
-
-    <!--<logger name="com.intuit.ito.atesvc" level="info"-->
-            <!--additivity="false">-->
-        <!--<appender-ref ref="STDOUT" />-->
-    <!--</logger>-->
-
     <root level="error">
         <appender-ref ref="STDOUT" />
     </root>

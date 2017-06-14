@@ -4,10 +4,12 @@ import io.gatling.http.Predef._
 
 
 object Helper extends Configuration {
-  val uri = getConfigValue("uri")
-  val run = exec(http(session => "test run")
-      .post(session => uri)
+  val create_uri = getConfigValue("create_uri")
+  val authenticate_uri = getConfigValue("authenticate_uri")
+  val createUser = exec(http(session => "create user")
+      .post(session => create_uri)
       .body(ELFileBody("json/test.json")).asJSON
-      .check(status.is(200))
+      .check(status.is(201))
     )
+
 }
