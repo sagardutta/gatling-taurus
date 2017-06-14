@@ -8,6 +8,7 @@ object Helper extends Configuration {
   val authenticate_uri = getConfigValue("authenticate_uri")
   val createUser = exec(http(session => "create user")
       .post(session => create_uri)
+      .header("api-key",session => session("api-key").as[String])
       .body(ELFileBody("json/test.json")).asJSON
       .check(status.is(201))
     )

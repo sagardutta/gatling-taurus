@@ -6,8 +6,8 @@ import io.gatling.http.Predef._
 object AuthHelper extends Configuration {
   val authenticate_uri = getConfigValue("authenticate_uri")
   val authenticate = exec(http(session => "authenticate")
-    .post(session => authenticate_uri)
-    .header("api-key","api-secret")
+    .get(session => authenticate_uri)
     .check(status.is(200))
+    .check(jsonPath("$.api-key").saveAs("api-key"))
   )
 }
