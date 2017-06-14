@@ -6,9 +6,6 @@ import scala.concurrent.duration._
 
 class BasicSimulation extends Simulation {
 
-val httpProtocol = http
-   .baseURL("http://")
-
   // parse load profile from Taurus
 
   val concurrency = Integer.getInteger("concurrency", 1).toInt
@@ -16,10 +13,10 @@ val httpProtocol = http
   val holdFor = Integer.getInteger("hold-for", 20).toInt
 
 
- val test = scenario("test taurus")
+ val test = scenario("Create User")
   .exec(AuthHelper.authenticate)
   .exec(Helper.createUser)
 
-  setUp(test.inject(constantUsersPerSec(concurrency) during (holdFor seconds))).protocols(httpProtocol)
+  setUp(test.inject(constantUsersPerSec(concurrency) during (holdFor seconds)))
 
 }
