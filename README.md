@@ -14,4 +14,7 @@
 ## How to run the test
 
 * sbt test (just to run everything with default values)
-* sbt test -Dhold-for=10 -Dconcurrency=2 (to run the test for 10 sec and with a concurrency of 2)
+* __Change the duration and concurrency__
+* sbt test -Dhold-for=10 -Dconcurrency=2
+* __Change the environment by using a different config file__
+* sbt test -Dconfig.file=src/test/resources/application-qa.conf
