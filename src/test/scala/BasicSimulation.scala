@@ -8,9 +8,8 @@ class BasicSimulation extends Simulation {
 
   // parse load profile from Taurus
 
-  val concurrency = Integer.getInteger("concurrency", 1).toInt
-
-  val holdFor = Integer.getInteger("hold-for", 20).toInt
+  val concurrency =  System.getProperty("concurrency","1").toDouble
+  val holdFor = Integer.getInteger("hold-for",1).toInt
 
 
  val test = scenario("Create User")
